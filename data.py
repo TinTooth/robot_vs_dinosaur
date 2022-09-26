@@ -8,6 +8,6 @@ robots = {
 }
 
 dinosaurs = {
-    'dinosaur1' : {'name': 'T-Rex','health':100,'attack_power':35},
+    'dinosaur1' : {'name': 'T-Rex','health':100,'attack_power':40},
 
 }
