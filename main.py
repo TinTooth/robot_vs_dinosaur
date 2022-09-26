@@ -1,14 +1,8 @@
-from dinosaur import Dinosaur
 
+from battlefield import BattleField
 
-from dinosaur import Dinosaur
-from robot import Robot
+battlefield = BattleField()
 
-
-
-robot1 = {'name': 'HeavyArms','health':120,
- 'weapon': {'name': 'shoulder missles','attack_power':120,'win':'The missles over powered the claw','type':'Rock'}
-}
-
-heavyarms = Robot(robot1)
-print(heavyarms.name)
+print(battlefield.dinosaur.name,battlefield.dinosaur.health,battlefield.dinosaur.attack_power)
+print()
+print(battlefield.robot.name,battlefield.robot.health,battlefield.robot.active_weapon.name,battlefield.robot.active_weapon.attack__power)
