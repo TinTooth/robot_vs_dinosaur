@@ -4,7 +4,11 @@ from dinosaur import Dinosaur
 from dinosaur import Dinosaur
 from robot import Robot
 
-trex = Dinosaur('T-Rex',100)
-gundam_heavyarms = Robot('HeavyArms',120)
 
-print(gundam_heavyarms.name)
+
+robot1 = {'name': 'HeavyArms','health':120,
+ 'weapon': {'name': 'shoulder missles','attack_power':120,'win':'The missles over powered the claw','type':'Rock'}
+}
+
+heavyarms = Robot(robot1)
+print(heavyarms.name)
