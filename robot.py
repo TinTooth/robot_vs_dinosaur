@@ -10,3 +10,4 @@ class Robot:
 
     def attack(self,target):
         target.health = target.health - self.active_weapon.attack_power
+        print(self.active_weapon.win)
