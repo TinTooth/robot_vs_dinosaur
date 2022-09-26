@@ -10,4 +10,4 @@ class Robot:
 
     def attack(self,target):
         target.health = target.health - self.active_weapon.attack_power
-        print(self.active_weapon.win)
+        print(self.active_weapon.win, f'and did {self.active_weapon.attack_power} damage!')
