@@ -34,13 +34,18 @@ class BattleField:
             self.choose_active_dinosaur()
             self.display_fighters("The next Dinosaur Steps into the Ring!")
             self.display_health() 
-            
+
     def choose_active_dinosaur(self):
         self.dinosaur = random.choice(self.herd.dinosaurs)
         self.herd.dinosaurs.remove(self.dinosaur)
 
     def choose_robot(self):
-        self.display_fleet('Your Fleet')
+        i = 1
+        print()
+        print('Your Fleet')
+        for robot in self.fleet.robots:
+            print(f'{i}) {robot.name} ')
+            i +=1
         choice = input('Pick your Fighter!  ')
         choice = self.validate_num_input(choice,len(self.fleet.robots)+1)
         self.robot = self.fleet.robots[int(choice) -1]
@@ -68,14 +73,6 @@ class BattleField:
         for dinosaur in self.herd.dinosaurs:
             print(f'{i}) {dinosaur.name}')
             i += 1
-        
-    def display_fleet(self,prompt):
-        i = 1
-        print()
-        print(prompt)
-        for robot in self.fleet.robots:
-            print(f'{i}) {robot.name} ')
-            i +=1
 
     def display_fighters(self,prompt):
         print()
