@@ -83,13 +83,7 @@ class BattleField:
     def display_health(self):
         print()
         print(f'           {self.robot.name} has {self.robot.health} Health  ', '/',f'  {self.dinosaur.name} has {self.dinosaur.health} Health')
-
-    def display_weapons(self):
-        i = 1
-        for weapon in self.robot.weapons:
-            print(f'{i}) {weapon.name}   Attack Power:  {weapon.attack_power}  Type:  {weapon.type}')
-            i += 1
-            
+         
     def display_welcome_start_game(self):
         print()
         print('       Welcome to Robots vs Dinosaurs!')
@@ -120,7 +114,10 @@ class BattleField:
         print()
 
     def select_weapon(self):
-        self.display_weapons()
+        i = 1
+        for weapon in self.robot.weapons:
+            print(f'{i}) {weapon.name}   Attack Power:  {weapon.attack_power}  Type:  {weapon.type}')
+            i += 1
         user_input = input('Select a Weapon! 1, 2 or 3:  ')
         user_input = self.validate_num_input(user_input,4)
         self.robot.active_weapon = self.robot.weapons[int(user_input)-1]
