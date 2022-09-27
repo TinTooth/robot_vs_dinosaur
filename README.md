@@ -1,3 +1,3 @@
 # robot_vs_dinosaur
 
-User selects Robot and Fights a dinosaur until one is reduced to 0 health.
+User selects number of fighters, which robot to fight with and then fights dinosaurs till one team is the winner.
