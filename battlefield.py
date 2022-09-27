@@ -93,6 +93,8 @@ class BattleField:
     def display_welcome_start_game(self):
         print()
         print('       Welcome to Robots vs Dinosaurs!')
+        print('     The game of Power,Quick,Precision')
+        print('          (Rock, Paper, Scissors)')
         print()
         self.display_dinosaurs()
         self.choose_active_dinosaur()
@@ -105,6 +107,7 @@ class BattleField:
         print()
         if self.herd.herdsize == 0:
             print(f'{self.dinosaur.name} was Defeated!')
+            time.sleep(2)
             print()
             print(f'The Robots are VICTORIOUS!!')
             self.print_robot()
